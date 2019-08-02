@@ -52,17 +52,17 @@
 \newcommand{\resumeSubheading}[4]{
 	\vspace{-1pt}\item
 	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
+		\textbf{#3} & #2 \\
+		\textit{\small#1} & \textit{\small #4} \\
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{description}[leftmargin=*]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{description}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
@@ -77,14 +77,16 @@
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 		\textbf{\href{https://github.com/jacobbroderick}{\Large Jacob Broderick}} & Email : \href{mailto:jacobabroderick@gmail.com}{jacobabroderick@gmail.com}\\
 		& Mobile : 541-973-3736 \\
+		& Github : https://github.com/jacobbroderick \\
 	\end{tabular*}
 	
 		%--------PROGRAMMING SKILLS------------
 	\section{Technical Expertise}
 	\resumeSubHeadingListStart
 	\resumeSubItem
-	{Languages}{: C\#, SQL, Python, Javascript/Jquery, HTML/CSS}
-	\resumeSubItem{Technologies}{.Net MVC, Git, SVN, Microsoft SQL Server, Agile, TFS, Jenkins}
+	{\textbf{Languages}}{SQL, Python, Golang, C\#, Javascript, HTML/CSS}
+	\resumeSubItem{\textbf{Technologies}}{.Net MVC, Git, SVN, Microsoft SQL Server, MySQL, Redis, kafka, TFS, Jenkins, Flask}
+	%\resumeSubItem{Methodologies}{Scrum, Agile, Kanban, Waterfall}
 	
 	\resumeSubHeadingListEnd
 
@@ -95,43 +97,40 @@
 	
 		\resumeSubheading
 	{OfficeAlly}{Vancouver, WA}
-	{Database Developer}{Jan 2018 - Present}
+	{Database Developer}{January 2018 - Present}
 	\resumeItemListStart
 	\resumeItem
-	{Transitioned databases to source control to ensure that changes are properly tracked}
+	{Transitioned database schemas to git version control to ensure that changes to tables and stored procedures are properly tracked across all environments}
 	\resumeItem
-	{Created a continuous integration workflow using Jenkins so that databases are automatically built on development servers}
-	\resumeItem{Designed tables and stored procedures for new features based on stakeholder requests.}
-	\resumeItem{Refactored tables and stored procedures to improve performance and usability, resulting in up to 50\% reduced query time.}
-	\resumeItem{Influenced data design decisions on big data projects resulting in, back end code utilization, increased speed, and ease of use.}
+	{Created a continuous deployment workflow using Jenkins pipelines resulting in databases automatically deploying to servers upon commit}
+	\resumeItem{Designed tables and stored procedures for new features based on stakeholder requests}
+	\resumeItem{Refactored tables and stored procedures in TSQL to improve performance and usability, leading to less downtime for customers}
+	\resumeItem{Collaborated with developers to determine best design for data objects to ensure that code quality is up to standard}
+	\resumeItem{Utilized multiple databases such as Redis, kafka, and MongoDB to ensure data delivery is efficient and stable}
+	\resumeItem{Reviewed other developer's code resulting in fewer bugs when production ready}
+	\resumeItem{Managed junior developers to ensure their success}
 	\resumeItemListEnd
 	
 	\resumeSubheading
 	{Coelo, Company by Design}{Corvallis, OR}
-	{Software Engineer}{Jun 2017 - Nov 2017}
+	{Software Engineer}{June 2017 - December 2017}
 	\resumeItemListStart
 	\resumeItem
-	{Improved lab processing time by creating a C\# image processing application to analyze fish.}
+	{Improved lab processing time by creating a C\# image processing application to analyze images of fish}
 	\resumeItem
-	{Designed and implemented prototypes with the purpose of updating deprecated machine learning software with new requirements.}
+	{Designed and implemented prototypes with the purpose of updating deprecated machine learning software with new requirements}
 	\resumeItemListEnd
 	
 	\resumeSubheading
 	{HP inc.}{Corvallis, OR}
-	{Software Engineering Intern}{Jun 2016 - Aug 2016}
+	{Software Engineering Intern}{June 2016 - August 2016}
 	\resumeItemListStart
-	\resumeItem{Designed and implemented an Oracle SQL database object to pre-process 40 terrabytes of data, greatly reducing overall application run time.}
-	\resumeItem{Improved ink processing analysis by querying metrics database, contributing to improved insight and rapid reduction in processing errors.}
+	\resumeItem{Created an Oracle SQL database object to pre-process 40 terabytes of data, greatly reducing overall application run time}
+	\resumeItem{Improved ink processing analysis by querying various metrics, contributing to improved insight and rapid reduction in processing errors}
 	\resumeItemListEnd
-	
-	\resumeSubheading{Center for Applied Systems and Software}{Corvallis, OR}{Student Software Developer}{May 2014 - Jun 2015, Sep 2015 - Jun 2016}
-	\resumeItemListStart
-	\resumeItem{Assisted in design and implementation of REST interface for the Oregon Department of Transportation. This API is utilized by an emergency response application, used by emergency services across Oregon.}
-	\resumeItem{Created an interface to the Travel Time system, seen on Oregon highways, that allows outside counties to utilize ODOT systems and databases to predict traffic trends.}
-	\resumeItem{Stored project documentation according to government regulations and specifications, using Microsoft Team Foundation Server.}
 
 	%\resumeItem{Mobile Web App, JQuery, Jasmine}{Created a prototype and Jasmine test suite for a fish market app using Sencha Touch and Phone Gap for Oregon SeaGrant allowing users to find which fish are being sold on the Oregon Coast.}
-	\resumeItemListEnd
+
 	
 	%\resumeSubheading{Center for Applied Systems and Software}{Corvallis, OR}{Student Test Engineer}{Jun 2015 - Sep 2015}
 	%\resumeItemListStart
@@ -144,11 +143,11 @@
 	\resumeSubHeadingListEnd
 
 		%-----------PROJECTS-----------------
-		%\section{Projects}
-		%\resumeSubHeadingListStart
-		%\resumeSubItem{Simple Raft Implementation}{Simple implementation of the raft consensus algorithm in Go. The raft algorithm prevents data loss by having a leader copy it's data to child processes. In the case of %an error the algorithm will elect a new leader and all other servers will keep up to date with the new leader. Developed leadership voting and server connection algorithms, and learned about distributed systems %algorithms.}
-		%\resumeSubItem{Starcraft AI}{Worked on a senior project team with well documented requirements. Created a working AI that would play the game Starcraft Brood War using an API designed for controlling the game. %The project was required to be well documented and clean to allow other students to continue the project. Built with C++ using Visual Studio with git as version control.}
-	%	\resumeSubHeadingListEnd
+		\section{Projects}
+		\resumeSubHeadingListStart
+		\resumeSubItem{\textbf{\href{https://github.com/jacobbroderick/BagOfHoldingBot}{Bag Of Holding Bot}}}{Discord.gg chat bot that tracks items Dungeons and Dragons players have in their character's bags of holding. Players can store, retrieve, and clear out the bag through the chat interface. Allows the Dungeon Master to secretly add and remove items. Written using Python, MySQL, and  Docker for uniform deployment across platforms}
+		
+		\resumeSubHeadingListEnd
 	
 
 	%
@@ -159,7 +158,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {Oregon State University}{Corvallis, OR}
-{Bachelor of Science in Computer Science with applied option in Security}{2017}
+{Bachelor of Science in Computer Science}{2017}
 \resumeSubHeadingListEnd
 
 	
